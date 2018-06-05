@@ -19,47 +19,71 @@
     <!-- Custom fonts for this template -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href="css/blog-post.css" rel="stylesheet">
     
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script>
 
     <!-- Plugin CSS -->
     <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/creative.min.css" rel="stylesheet">      
+    <link href="css/creative.min.css" rel="stylesheet">
+      <script src="js/jquery-1.11.1.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
      
-      <div class="modal fade" id="ModalLaboral" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-		<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
-                
-			</div>
-            <h4 class="modal-title" id="myModalLabel">Oferta Laboral</h4>
-			<div class="modal-body">
-				<ul>
-                    <li>
-                        Se solicitan Asesores en danza para impartir el diplomado en danza dentro de México, impartiendo diferentes estampas, comunicarte por el Prof. Salvador Villafuerte Álvarez. 
-                    </li><br>
-                    <li>
-                        Se solicitan asesor(a) en Artes visuales con mínimo 5 años de experiencia para impartir el diplomado de artes visuales de Manera presencial y/o en linea, a través de las herramientas tecnológicas que se cuentan hoy en dia. Interesados comunicarse con el Prof. Alejandro Gómez Ambriz 4535317901  correo: profesordeguitarragomez@hotmail.com
-                    </li><br>
-                    <li>
-                        Se solicita maestro(a) de teatro para impartir diplomado de teatro de manera presencial en las capitales de los estados.  Interesados comunicarse con el Prof. Alejandro Gómez Ambriz 4535317901  correo: profesordeguitarragomez@hotmail.com
-                    </li><br>
-                    <li>
-                        Mtra.  
-                    </li>
-                </ul>
-			</div>
-		</div>
-	</div>
-</div>
+    <script>
+        function LoadMessage(){
+            var url = "modulos/mensaje.php";
+            $.ajax({
+                type: "POST",
+                url: url, 
+                data:{} ,
+                success:function(datos){
+                    $('#contenedor2').html(datos);
+                }
+            });
+        }
+        function LoadLaboral(){
+            var url = "modulos/oferta_laboral.php";
+            $.ajax({
+                type: "POST",
+                url:url,
+                data:{},
+                success:function(datos){
+                    $('#contenedor2').html(datos);
+                }
+            });
+        }
+        function LoadMusic(){
+            var url = "modulos/musica_linea.php";
+            $.ajax({
+                type: "POST",
+                url:url,
+                data:{},
+                success:function(datos){
+                    $('#contenedor2').html(datos);
+                }
+            });
+        }
+         function LoadBlog(){
+            var url = "modulos/blog_noticias.php";
+            $.ajax({
+                type: "POST",
+                url:url,
+                data:{},
+                success:function(datos){
+                    $('#contenedor2').html(datos);
+                }
+            });
+        }
+    </script>
+      
+
+
 <div class="modal fade" id="Modaloferta" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
-		<div class="modal-content">
+		<div class="modal-content" id="modalContent">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
@@ -83,7 +107,7 @@
 </div>
 <div class="modal fade" id="Modaldanza" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
-		<div class="modal-content">
+		<div class="modal-content" id="modalContent">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
@@ -106,7 +130,7 @@
 </div>
 <div class="modal fade" id="Modalarte" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
-		<div class="modal-content">
+		<div class="modal-content" id="modalContent">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
@@ -126,32 +150,10 @@
 		</div>
 	</div>
 </div>
-<div class="modal fade" id="Modalmusicaline" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-		<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
-                
-			</div>
-            <h4 class="modal-title" id="myModalLabel">Musica(en linea)</h4>
-			<div class="modal-body">
-                <p>Es él diplomado que a través de las herramientas tecnológicas y proyectos innovadores prepara a docentes, maestros y músicos así como público en general sin importar su edad, a impartir una clase a nivel básico de música en todo el pais, y centroamérica.. (resaltar este apartado con otro color o con algo que sea más agradable a la vista y se pueda ingresar)</p>
-                <ul>
-                    <li>Visión: El diplomado nacional de música en linea para el 2020 con ayuda de las TIC´S, registre la mayor matrícula que un diplomado haya tenido en la historia de México, con una matrícula única de 500 alumnos sin perder calidad y sin que ellos salgan de casa.
-                    </li><br>
-                    <li>
-                        Misión: el diplomado de música en linea es una institución avalada por la SEP comprometida con la difusión y transmisión del arte en todo sentido, rescatando las tradiciones de la cultura mexicana y otorgar conocimiento a través de las innovacioones tecnológicas con calidad de una manera didáctica.
-                    </li>
-                </ul>
-			</div>
-		</div>
-	</div>
-</div>
+
 <div class="modal fade" id="Modalevento" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
-		<div class="modal-content">
+		<div class="modal-content" id="modalContent">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
@@ -168,7 +170,7 @@
 </div>
 <div class="modal fade" id="Modalinduccion" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
-		<div class="modal-content">
+		<div class="modal-content" id="modalContent">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
@@ -186,7 +188,7 @@
       
 <div class="modal fade" id="Modalvecas" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
-		<div class="modal-content">
+		<div class="modal-content" id="modalContent">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
@@ -201,35 +203,35 @@
 		</div>
 	</div>
 </div>
-<div class="modal fade" id="Modalnoticias" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="Modalescolar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
-		<div class="modal-content">
+		<div class="modal-content" id="modalContent">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
             
 			</div>
-            <h4 class="modal-title" id="myModalLabel">Noticias para Musicos</h4>    
+            <h4 class="modal-title" id="myModalLabel">Servicios Escolares</h4>    
 			<div class="modal-body">
-                <p>No hay noticias... </p>
+                <p>Al estar estudiando con nosotros, tienes derecho a una constancia de estudios y a una credencial de estudiante, útiles para cualquier trámite legal y descuentos en periodos vacacionales. </p>
                 
 			</div>
 		</div>
 	</div>
 </div>
-<div class="modal fade" id="Modalnoticias2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="Modalexamen" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
-		<div class="modal-content">
+		<div class="modal-content" id="modalContent">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
             
 			</div>
-            <h4 class="modal-title" id="myModalLabel">Noticias para Docentes</h4>    
+            <h4 class="modal-title" id="myModalLabel">Examen de Admisión</h4>    
 			<div class="modal-body">
-                <p>No hay noticias... </p>
+                <p>Es un examen diseñado para poder comenzar con lo básico de la música, serán 14 preguntas de opción múltiple, cada una solicitando una única respuesta. El exámen podrá realizarse hasta 5 veces para poderlo acreditar, la calificación mínima es 9, esto para conservar y compartir nuestro nivel de excelencia y calidad. </p>
                 
 			</div>
 		</div>
@@ -239,26 +241,27 @@
 
   <body id="page-top">      
         
+ 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">Titulo</a>
+        <a class="navbar-brand js-scroll-trigger" href="index.html">Titulo</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about">Requisitos</a>
+              <a class="nav-link js-scroll-trigger"  href="index.html">Inicio</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#" data-toggle="modal" data-target="#Modalvecas">Becas</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#portfolio">Noticias</a>
+              <a class="nav-link js-scroll-trigger"  href="#contenedor2" onclick="LoadBlog();">Noticias</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#portfolio">Oferta</a>
+              <a class="nav-link js-scroll-trigger" href="#contenedor2" onclick="LoadLaboral();">Oferta</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#" data-toggle="modal" data-target="#Modalinduccion">Curso de Inducción</a>
@@ -267,7 +270,8 @@
         </div>
       </div>
     </nav>
-
+<div id="contenedor">
+    
     <header class="masthead text-center text-white d-flex">
       <div class="container my-auto">
         <div class="row">
@@ -284,7 +288,7 @@
         </div>
       </div>
     </header>
-
+<div id="contenedor2">
     <section class="bg-primary" id="about">
       <div class="container">
         <div class="row">
@@ -307,7 +311,13 @@
         </div>
       </div>
     </section>
-
+    <input type="checkbox" id="cerrara">
+        <label for="cerrara" id="btn-cerrar">X</label>
+        <div class="modala">
+            <div class="contenidoo">
+                <img class="imgModal" src="img/0001AG11%20calendario%20%20CARTELES%20DE%20MUSICA%2005.jpg" alt="">
+            </div>
+        </div>
     <section id="services">
       <div class="container">
         <div class="row">
@@ -322,25 +332,37 @@
         <div class="row">
           <div class="col-lg-3 col-md-6 text-center">
             <div class="service-box mt-5 mx-auto">
-              <a class="btn btn-secondary" data-toggle="modal" data-target="#Modaloferta">Teatro</a>
+              <a href="#" data-toggle="modal" data-target="#Modaloferta">
+                <img class="icon" src="img/teatro.png">
+                <h5>Teatro</h5>
+                </a>
               <p class="text-muted mb-0">Es un diplomado enfocado en la dramatización y realización de obras en escuelas de educación básica, ideal para estudiantes de artes. </p>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 text-center">
             <div class="service-box mt-5 mx-auto">
-              <a class="btn btn-secondary" data-toggle="modal" data-target="#Modaldanza">Danza</a>
+              <a href="#" data-toggle="modal" data-target="#Modaldanza">
+                <img class="icon" src="img/danza.png">
+                  <h5>Danza</h5>
+                </a>
               <p class="text-muted mb-0">Es un diplomado que busca rescatar y difundir el arte del baile de la cultura mexicana.</p>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 text-center">
             <div class="service-box mt-5 mx-auto">
-              <a class="btn btn-secondary" data-toggle="modal" data-target="#Modalarte">Artes Visuales</a>
+              <a href="#" data-toggle="modal" data-target="#Modalarte">
+                <img class="icon" src="img/artes.png">
+                  <h5>Artes Visuales</h5>
+                </a>
               <p class="text-muted mb-0">Es entendido generalmente como cualquier actividad o producto realizado con una finalidad estética y también comunicativa.</p>
             </div>
           </div>
            <div class="col-lg-3 col-md-6 text-center">
             <div class="service-box mt-5 mx-auto">
-                <a class="btn btn-secondary" data-toggle="modal" data-target="#Modalmusicaline">Musica(en linea)</a>
+                <a href="#contenedor2" onclick="LoadMusic();">
+                <img class="icon" src="img/musica.png">
+                <h5>Musica(en linea)</h5>
+                </a>
               <p class="text-muted mb-0">Es él diplomado que a través de las herramientas tecnológicas y proyectos innovadores prepara a docentes, maestros y músicos así como público en general sin importar su edad</p>
             </div>
           </div>
@@ -353,22 +375,22 @@
       <div class="container-fluid p-0">
         <div class="row no-gutters">
           <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" data-toggle="modal" data-target="#Modalmusicaline">
+            <a class="portfolio-box" href="#" data-toggle="modal" data-target="#Modalescolar">
               <img class="img-fluid" src="img/portfolio/fullsize/1.jpg" alt="">
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">
-                    Musica
+                    Servicios 
                   </div>
                   <div class="project-name">
-                    En Linea
+                    Escolares
                   </div>
                 </div>
               </div>
             </a>
           </div>
           <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box"  data-toggle="modal" data-target="#ModalLaboral">
+            <a class="portfolio-box" href="#contenedor2"  onclick="LoadLaboral();">
               <img class="img-fluid" src="img/portfolio/fullsize/2.jpg" alt="">
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
@@ -383,7 +405,7 @@
             </a>
           </div>
           <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" data-toggle="modal" data-target="#Modalnoticias">
+            <a class="portfolio-box" href="#contenedor2" onclick="LoadBlog();">
               <img class="img-fluid" src="img/portfolio/fullsize/3.jpg" alt="">
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
@@ -391,30 +413,30 @@
                     Noticias
                   </div>
                   <div class="project-name">
-                    Para Musicos
+                    Para Músicos
                   </div>
                 </div>
               </div>
             </a>
           </div>
           <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" data-toggle="modal" data-target="#Modalnoticias2">
+            <a class="portfolio-box" href="#" data-toggle="modal" data-target="#Modalexamen">
               <img class="img-fluid" src="img/portfolio/fullsize/4.jpg" alt="">
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">
-                    Noticias
+                    Examen  
                   </div>
                   <div class="project-name">
-                    Para Docentes
+                    Admisión
                   </div>
                 </div>
               </div>
             </a>
           </div>
           <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="img/portfolio/fullsize/5.jpg">
-              <img class="img-fluid" src="img/portfolio/thumbnails/5.jpg" alt="">
+            <a class="portfolio-box" href="#">
+              <img class="img-fluid" src="img/portfolio/fullsize/5.jpg" alt="">
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">
@@ -428,7 +450,7 @@
             </a>
           </div>
           <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" data-toggle="modal" data-target="#Modalevento">
+            <a class="portfolio-box" href="#" data-toggle="modal" data-target="#Modalevento">
               <img class="img-fluid" src="img/portfolio/fullsize/6.jpg" alt="">
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
@@ -452,15 +474,15 @@
         <div class="btn-group">
           <button type="button" class="btn btn-secondary">Diplomado en Linea</button>
           <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <span class="sr-only">Diplomado en Linea</span>
+            <span class="sr-only">Diplomad  o en Linea</span>
           </button>
           <div class="dropdown-menu">
-            <a class="dropdown-item" href="mensaje.html">Mensaje del Director</a>
+            <a class="dropdown-item" href="#contenedor2" onclick="LoadMessage();">Mensaje del Director</a>
           </div>
         </div>
       </div>
     </section>
-
+    </div>
     <section id="contact">
       <div class="container">
         <div class="row">
@@ -480,18 +502,18 @@
         <div class="row">
           <div class="col-lg-4 ml-auto text-center">
             <i class="fa fa-phone fa-3x mb-3 sr-contact"></i>
-            <p>123-456-6789</p>
+            <p>4535317901</p>
           </div>
           <div class="col-lg-4 mr-auto text-center">
             <i class="fa fa-envelope-o fa-3x mb-3 sr-contact"></i>
             <p>
-              <a href="mailto:your-email@your-domain.com">feedback@startbootstrap.com</a>
+              <a href="mailto:your-email@your-domain.com">profesordeguitarragomez@hotmail.com</a>
             </p>
           </div>
         </div>
       </div>
     </section>
-
+</div>
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
