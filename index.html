@@ -9,7 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-            
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>     
       
     <title>Creative - Start Bootstrap Theme</title>
 
@@ -22,7 +23,7 @@
     <link href="css/blog-post.css" rel="stylesheet">
     
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script>
+    
 
     <!-- Plugin CSS -->
     <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
@@ -85,19 +86,16 @@
           <div class="modal-dialog" role="document">
 		<div class="modal-content" id="modalContent">
 			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
-                
+                <h4 class="modal-title" id="myModalLabel">Teatro</h4>
+				<button type="button" class="btn btn-danger" data-dismiss="modal">X</button>
 			</div>
-            <h4 class="modal-title" id="myModalLabel">Teatro</h4>
 			<div class="modal-body">
                 <p>Es un diplomado enfocado en la dramatización y realización de obras en escuelas de educación básica, ideal para estudiantes de artes. </p>
 				<ul>
-                    <li>
+                    <li id="justi">
                         Visión el diplomado de teatro busca ser el mejor diplomado de práctica profesional para docentes y maestros de todo el pais, basándose en las tecnicas de dramatización y expresión corporal para una buena presentación teatral en las escuelas que lo necesiten. 
                     </li><br>
-                    <li>
+                    <li id="justi">
                         Misión: Otorgar las herramientas y técnicas teatrales necesarias para poder realizar un buen trabajo teatral. 
                     </li>
                 </ul>
@@ -109,13 +107,10 @@
           <div class="modal-dialog" role="document">
 		<div class="modal-content" id="modalContent">
 			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
-                
+                <h4 class="modal-title" id="myModalLabel">Danza</h4>
+				<button type="button" class="btn btn-danger" data-dismiss="modal">X</button>               
 			</div>
-            <h4 class="modal-title" id="myModalLabel">Danza</h4>
-			<div class="modal-body">
+            <div class="modal-body">
                 <p>Es un diplomado que busca rescatar y difundir el arte del baile de la cultura mexicana, presentando estampas de cada estado de la república mexicana.</p>
 				<ul>
                     <li>Visión
@@ -132,12 +127,9 @@
           <div class="modal-dialog" role="document">
 		<div class="modal-content" id="modalContent">
 			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
-                
-			</div>
-            <h4 class="modal-title" id="myModalLabel">Artes Visuales</h4>
+                <h4 class="modal-title" id="myModalLabel">Artes Visuales</h4>
+				<button type="button" class="btn btn-danger" data-dismiss="modal">X</button>               
+			</div>            
 			<div class="modal-body">
                 <ul>
                     <li>Visión
@@ -153,14 +145,11 @@
 
 <div class="modal fade" id="Modalevento" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
-		<div class="modal-content" id="modalContent">
+		<div class="modal-content">
 			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
-            
-			</div>
-            <h4 class="modal-title" id="myModalLabel">Eventos Especiales</h4>    
+                <h4 class="modal-title" id="myModalLabel">Eventos Especiales</h4>
+				<button type="button" class="btn btn-danger" data-dismiss="modal">X</button>            
+			</div>                
 			<div class="modal-body">
                 <p>Noveno congreso nacional de las artes cerramos las actividades realizadas en el ciclo 2017-2018 con una matrícula de más de 500 alumnos!, presentando lo trabajado y difundiendo las artes culturales y gastronómicas de cada sede. </p>
                 <p>Los diplomantes de música en linea, solo los alumnos más destacados en sus instrumentos tienen el privilegio de poner en alto la preparación que se recibe en nuestro plan de estudios.</p>
@@ -172,12 +161,9 @@
           <div class="modal-dialog" role="document">
 		<div class="modal-content" id="modalContent">
 			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
-            
-			</div>
-            <h4 class="modal-title" id="myModalLabel">Curso de Inducción</h4>    
+                 <h4 class="modal-title" id="myModalLabel">Curso de Inducción</h4>
+				<button type="button" class="btn btn-danger" data-dismiss="modal">X</button>            
+			</div>               
 			<div class="modal-body">
                 <p>El curso de inducción es la presentación del diplomado ante la sociedad, compartiendo el material que se va trabajar así como las ventajas de cursarlo en linea, habrá conferencias en algunas ciudades importantes de la república mexicana, como Chihuahua, Ciudad de México, Querétaro, Morelia, entre otras. </p>
                 <p>Próximamente se agendarán fechas para Chetumal, Tijuana, Campeche, Veracruz, entre otros.</p>
@@ -190,15 +176,11 @@
           <div class="modal-dialog" role="document">
 		<div class="modal-content" id="modalContent">
 			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
-            
-			</div>
-            <h4 class="modal-title" id="myModalLabel">Becas</h4>    
+                <h4 class="modal-title" id="myModalLabel">Becas</h4>        
+				<button type="button" class="btn btn-danger" data-dismiss="modal">X</button>            
+			</div>            
 			<div class="modal-body">
-                <p>Si tienes alguna cuestión económica que no te permitiera ingresar solicita tu beca! puedes obtener una beca de hasta el 60%, ya que nuestra prioridad es apoyar al músico y/o docente a que pueda capacitarse y certificarse para superarse personal y laboralmente. </p>
-                
+                <p>Si tienes alguna cuestión económica que no te permitiera ingresar solicita tu beca! puedes obtener una beca de hasta el 60%, ya que nuestra prioridad es apoyar al músico y/o docente a que pueda capacitarse y certificarse para superarse personal y laboralmente. </p>                
 			</div>
 		</div>
 	</div>
@@ -207,32 +189,39 @@
           <div class="modal-dialog" role="document">
 		<div class="modal-content" id="modalContent">
 			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
-            
-			</div>
-            <h4 class="modal-title" id="myModalLabel">Servicios Escolares</h4>    
+                <h4 class="modal-title" id="myModalLabel">Servicios Escolares</h4>
+				<button type="button" class="btn btn-danger" data-dismiss="modal">X</button>           
+			</div>                
 			<div class="modal-body">
-                <p>Al estar estudiando con nosotros, tienes derecho a una constancia de estudios y a una credencial de estudiante, útiles para cualquier trámite legal y descuentos en periodos vacacionales. </p>
-                
+                <p>Al estar estudiando con nosotros, tienes derecho a una constancia de estudios y a una credencial de estudiante, útiles para cualquier trámite legal y descuentos en periodos vacacionales. </p>                
 			</div>
 		</div>
 	</div>
 </div>
 <div class="modal fade" id="Modalexamen" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
-		<div class="modal-content" id="modalContent">
+		<div class="modal-content">
 			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
-            
+                <h4 class="modal-title" id="myModalLabel">Examen de Admisión</h4>    
+				<button type="button" class="btn btn-danger" data-dismiss="modal">X</button>            
 			</div>
-            <h4 class="modal-title" id="myModalLabel">Examen de Admisión</h4>    
+            
 			<div class="modal-body">
-                <p>Es un examen diseñado para poder comenzar con lo básico de la música, serán 14 preguntas de opción múltiple, cada una solicitando una única respuesta. El exámen podrá realizarse hasta 5 veces para poderlo acreditar, la calificación mínima es 9, esto para conservar y compartir nuestro nivel de excelencia y calidad. </p>
-                
+                <p>Es un examen diseñado para poder comenzar con lo básico de la música, serán 14 preguntas de opción múltiple, cada una solicitando una única respuesta. El exámen podrá realizarse hasta 5 veces para poderlo acreditar, la calificación mínima es 9, esto para conservar y compartir nuestro nivel de excelencia y calidad. </p>                
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal fade" id="Modalofer" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Oferta</h4>    
+				<button type="button" class="btn btn-danger" data-dismiss="modal">X</button>            
+			</div>
+            
+			<div class="modal-body">
+                <img  class="imgModal" src="img/0001AG11%20Cartel%20apertura%20musica%20y%20teatro.jpg">
 			</div>
 		</div>
 	</div>
@@ -270,20 +259,28 @@
         </div>
       </div>
     </nav>
-<div id="contenedor">
-    
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">   
+             <div class="modal-footer">
+                 <button type="button" class="btn btn-danger" data-dismiss="modal">X</button>
+            </div>
+          <img class="imgModal" src="img/0001AG11%20calendario%20%20CARTELES%20DE%20MUSICA%2005.jpg">    
+        </div>
+      </div>      
+</div>
+<div id="contenedor">    
     <header class="masthead text-center text-white d-flex">
       <div class="container my-auto">
         <div class="row">
           <div class="col-lg-10 mx-auto">
             <h1 class="text-uppercase">
-              <strong>Your Favorite Source of Free Bootstrap Themes</strong>
-            </h1>
-            <hr>
+              <strong></strong>
+            </h1>            
           </div>
-          <div class="col-lg-8 mx-auto">
-            <p class="text-faded mb-5">Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!</p>
-            <a class="btn btn-primary btn-xl js-scroll-trigger" data-toggle="modal" data-target="#miModal">Calendario Escolar</a>
+          <div class="col-lg-8 mx-auto" id="button">
+            <p class="text-faded mb-5"></p>
+            <a class="btn btn-primary btn-xl js-scroll-trigger" data-toggle="modal" data-target=".bs-example-modal-lg">Calendario Escolar</a>
           </div>
         </div>
       </div>
@@ -311,18 +308,12 @@
         </div>
       </div>
     </section>
-    <input type="checkbox" id="cerrara">
-        <label for="cerrara" id="btn-cerrar">X</label>
-        <div class="modala">
-            <div class="contenidoo">
-                <img class="imgModal" src="img/0001AG11%20calendario%20%20CARTELES%20DE%20MUSICA%2005.jpg" alt="">
-            </div>
-        </div>
+   
     <section id="services">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading">Oferta Educativa</h2>
+            <a href="#" data-toggle="modal" data-target="#Modalofer"> <h2 class="section-heading">Oferta Educativa</h2></a>
             <hr class="my-4">
               <p>Nuestro proyecto comprende 4 Artes, tres de ellas presenciales (danza, teatro, artes visuales) y en línea una, el diplomado nacional de música, la cual te brinda la oportunidad de trabajar en Cualquier parte de México y Centroamérica en la comodidad de tu casa. Siendo esta tu opción más cómoda.</p>
           </div>
@@ -421,7 +412,7 @@
           </div>
           <div class="col-lg-4 col-sm-6">
             <a class="portfolio-box" href="#" data-toggle="modal" data-target="#Modalexamen">
-              <img class="img-fluid" src="img/portfolio/fullsize/4.jpg" alt="">
+              <img class="img-fluid" src="img/examen.png" alt="">
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">
