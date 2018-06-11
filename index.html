@@ -78,6 +78,17 @@
                 }
             });
         }
+        function LoadExamen(){
+            var url = "modulos/examen.php";
+            $.ajax({
+                type: "POST",
+                url:url,
+                data:{},
+                success:function(datos){
+                    $('#contenedor2').html(datos);
+                }
+            });
+        }
         
     </script>
       
@@ -199,20 +210,7 @@
 		</div>
 	</div>
 </div>
-<div class="modal fade" id="Modalexamen" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-		<div class="modal-content">
-			<div class="modal-header">
-                <h4 class="modal-title" id="myModalLabel">Examen de Admisión</h4>    
-				<button type="button" class="btn btn-danger" data-dismiss="modal">X</button>            
-			</div>
-            
-			<div class="modal-body">
-                <p>Es un examen diseñado para poder comenzar con lo básico de la música, serán 14 preguntas de opción múltiple, cada una solicitando una única respuesta. El exámen podrá realizarse hasta 5 veces para poderlo acreditar, la calificación mínima es 9, esto para conservar y compartir nuestro nivel de excelencia y calidad. </p>                
-			</div>
-		</div>
-	</div>
-</div>
+
 <div class="modal fade" id="Modalofer" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
 		<div class="modal-content">
@@ -227,7 +225,9 @@
 		</div>
 	</div>
 </div>
-  </head>
+      
+
+</head>
 
   <body id="page-top">      
         
@@ -412,7 +412,7 @@
             </a>
           </div>
           <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="#" data-toggle="modal" data-target="#Modalexamen">
+             <a class="portfolio-box" href="#contenedor2" onclick="LoadExamen();">
               <img class="img-fluid" src="img/examen.png" alt="">
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
@@ -427,7 +427,7 @@
             </a>
           </div>
           <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="#">
+            <a class="portfolio-box"  href="#contenedor2" onclick="LoadBlog();">
               <img class="img-fluid" src="img/portfolio/fullsize/5.jpg" alt="">
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
@@ -459,20 +459,7 @@
         </div>
       </div>
     </section>
-    
-<div class="modal fade" id="ModalPagar" role="dialog">
-    <div class="modal-dialog">
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title">Pagar desde:</h4>
-                <button type="button" class="btn btn-danger" data-dismiss="modal">X</button>             
-            </div>
-            <div class="modal-body" id="ModalBody">
-            </div>
-        </div>
-    </div>
-</div>
+
 
     <section class="bg-dark text-white">
       <div class="container text-center">
@@ -484,7 +471,6 @@
           </button>
           <div class="dropdown-menu">
             <a class="dropdown-item" href="#contenedor2" onclick="LoadMessage();">Mensaje del Director</a>
-            <a class="dropdown-item btnPagar">Pagar</a>
           </div>
          
         </div>
@@ -523,13 +509,7 @@
     </section>
 </div>
       
-      <script>
-              $('.btnPagar').on('click',function(){
-                    $('#ModalBody').load('modulos/pagar.php',function(){
-                        $('#ModalPagar').modal({show:true});
-                    });
-              });
-      </script>
+
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
