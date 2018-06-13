@@ -33,6 +33,8 @@
                 <p>Bienvenido a la nueva plataforma del único diplomado en artes para músicos y maestros en México y centro américa. Para poder acceder a la guía de estudios y a los 5 intentos de tu examen de admisión hay que realizar un pago de $100 pesos mexicanos (6 dolares americanos) </p>
 
                 <p>Es un examen diseñado para poder comenzar con lo básico de la música, serán 14 preguntas de opción múltiple, cada una solicitando una única respuesta. El exámen podrá realizarse hasta 5 veces para poderlo acreditar, la calificación mínima es 9, esto para conservar y compartir nuestro nivel de excelencia y calidad. </p>
+
+                 <p>Se cuenta con dos semanas para realizar el examen a partir de cuando se entrega el usuario y contraseña para poder acceder al sistema.</p>
               <button type="button" class="btn btn-info" onclick="LoadExa();">¿Dónde realizo mi pago? </button>
               <div id="contenedo-pago" style="visibility:hidden">
                   <br>
@@ -57,6 +59,7 @@
                     </ul> 
                      <ul class="list-group" id="correo" style="visibility:hidden; margin-top:-14%">
                               <li class="list-group-item"><h6>Enviar comprobante a: </h6> <br>contacto@diplomadosdelasep.com.mx</li>
+                              <li class="list-group-item">Una vez enviado el comprobante de pago al correo electrónico indicado se le asignará un usuario y una contraseña para la realización del examen de admisión.<br>El Ticket debe contener escrito: Nombre completo, telefono de contácto y lugar de residencia.</li>
                     </ul> 
                 </div>
                   <br>
