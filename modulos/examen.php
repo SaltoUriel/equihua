@@ -1,6 +1,4 @@
-<br>
-<br>
-<br>
+
 <script>
     function LoadExa(){
         document.getElementById('contenedo-pago').style.visibility='visible';
